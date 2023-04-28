@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   const [datas, setDatas] = React.useState([]);
   React.useEffect(() => {
-    fetch("http://172.30.1.12/dev/data", {
+    fetch("http://14.40.79.97/dev/data", {
       method: "GET",
     })
       .then(res => {
