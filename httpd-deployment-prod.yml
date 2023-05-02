@@ -16,13 +16,5 @@ spec:
     containers:
     - name: container
       image: santhaim/react:latest
-      envFrom:
-      - configMapRef:
-          name: httpd-cm-prod
       ports:
       - containerPort: 80
-      resources:
-        requests:
-          cpu: 100m
-        limits:
-          cpu: 200m
