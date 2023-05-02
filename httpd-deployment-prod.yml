@@ -15,7 +15,7 @@ spec:
    spec:
     containers:
     - name: container
-      image: santhaim:react:latest
+      image: santhaim/react:latest
       envFrom:
       - configMapRef:
           name: httpd-cm-prod
