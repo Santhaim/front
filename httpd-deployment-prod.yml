@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: httpd-deployment-prod
+ name: frontend-deployment
  namespace: bsj-dev
 spec:
  selector:
    matchLabels:
     type: web
- replicas: 2
+ replicas: 1
  template:
    metadata:
      labels:
@@ -15,14 +15,6 @@ spec:
    spec:
     containers:
     - name: container
-      image: santhaim:latest
-      envFrom:
-      - configMapRef:
-          name: httpd-cm-prod
+      image: santhaim/react:latest
       ports:
       - containerPort: 80
-      resources:
-        requests:
-          cpu: 100m
-        limits:
-          cpu: 200m
